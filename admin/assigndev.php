@@ -88,8 +88,8 @@ if(isset($_POST['register'])) {
         ?>
         <div class="form-group">
             <label>Animal ID:</label>
-            <select name="animal_device_animal_id" required class="form-control">
-                <option selected="">...Select ID...</option>
+            <select name="animal_device_animal_id" required="" class="form-control">
+                <option selected=""></option>
                 <?php
                 //include("../connection/db.php");
                 $query = "SELECT * FROM animal_table";
@@ -106,8 +106,8 @@ if(isset($_POST['register'])) {
         </div>
         <div class="form-group">
             <label>Device ID:</label>
-            <select name="animal_device_device_id" required class="form-control">
-                <option selected="">...Select ID...</option>
+            <select name="animal_device_device_id" required="" class="form-control">
+                <option selected=""></option>
                 <?php
                 //include("../connection/db.php");
                 $query = "SELECT * FROM device_table  WHERE device_id NOT IN (SELECT animal_device_device_id FROM animal_device_table)";

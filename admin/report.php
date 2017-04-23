@@ -61,7 +61,7 @@ require_once '../connection/db.php';
                 ?>
             </select>
             <span class="input-group-btn">
-                                <button type='submit' name='search' id='search-btn' class="btn btn-flat btn-danger"><i class="fa fa-search"></i></button>
+                                <button type='submit' name='search' id='search-btn' class="btn btn-flat btn-default"><i class="fa fa-search"></i></button>
                             </span>
         </div>
     </form>
@@ -77,7 +77,11 @@ require_once '../connection/db.php';
 
 
     ?>
-        <table  border=0 cellpadding="1" cellspacing="1" id="" width="100%" class="table table-hover table-condensed table-striped">
+        <span class="input-group-btn">
+        <button type='submit' name='search' id='print' onclick="printData();" class="btn btn-flat btn-default btn-circle"><i class="fa fa-print"></i></button>&nbsp;
+        <button type='submit' name='search' id='print' onclick="printData();" class="btn btn-flat btn-default btn-circle"><i class="fa fa-file"></i></button>
+        </span>
+        <table  border=0 cellpadding="1" cellspacing="1" id="table1" width="100%" class="table table-hover table-condensed table-striped table-bordered">
 
         <tr bgcolor=''>
             <td>Animal ID</td>
@@ -119,8 +123,12 @@ require_once '../connection/db.php';
         $result = mysqli_query($con, "SELECT * FROM animal_table,animal_device_table,animal_location");
 
 ?>
+        <span class="input-group-btn">
+        <button type='submit' name='search' id='' onclick="printData();" class="btn btn-flat btn-default btn-circle"><i class="fa fa-print"></i></button> &nbsp;
+        <button type='submit' name='search' onclick="printData();" class="btn btn-flat btn-default btn-circle"><i class="fa fa-file"></i></button>
+        </span>
 
-        <table  border=0 cellpadding="1" cellspacing="1" id="" width="100%" class="table table-hover table-condensed table-striped">
+        <table  border=0 cellpadding="1" cellspacing="1" id="table1" width="100%" class="table table-hover table-condensed table-striped table-bordered">
 
         <tr bgcolor=''>
             <td>Animal ID</td>
@@ -146,9 +154,6 @@ require_once '../connection/db.php';
         <?php
     }
 ?>
-
-
-
 
     <!--********************Add content here *******************-->
 <?php include 'footer.php';?>

@@ -54,5 +54,18 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../js/AdminLTE/dashboard.js" type="text/javascript"></script>
 
+
+<script>
+    function printData()
+    {
+        var divToPrint=document.getElementById("table1");
+        newWin= window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    }
+
+</script>
+
 </body>
 </html>

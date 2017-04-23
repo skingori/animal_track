@@ -92,7 +92,7 @@ VALUES('$animal_location_animal_device_id',now(),'$animal_xcoordinate','$animal_
         <div class="form-group">
             <label>Animal-Device ID:</label>
             <select name="animal_location_animal_device_id" required class="form-control">
-                <option selected="">...Select ID...</option>
+                <option selected=""></option>
                 <?php
                 //include("../connection/db.php");
                 $query = "SELECT * FROM animal_device_table WHERE animal_device_animal_id NOT IN (SELECT animal_location_animal_device_id FROM animal_location)";
@@ -109,11 +109,11 @@ VALUES('$animal_location_animal_device_id',now(),'$animal_xcoordinate','$animal_
         </div>
         <div class="form-group">
             <label>X co-ordinate:</label>
-            <input type="text" style="color: rebeccapurple" class="form-control" name="animal_xcoordinate">
+            <input type="text" style="color: rebeccapurple" required class="form-control" name="animal_xcoordinate">
         </div>
         <div class="form-group">
             <label>Y co-ordinate:</label>
-            <input type="text" style="color: rebeccapurple" class="form-control" name="animal_ycoordinate">
+            <input type="text" style="color: rebeccapurple" required class="form-control" name="animal_ycoordinate">
         </div>
 
         <!--</div>-->
