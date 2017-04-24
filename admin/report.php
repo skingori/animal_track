@@ -120,7 +120,7 @@ require_once '../connection/db.php';
 
     }
     else{
-        $result = mysqli_query($con, "SELECT * FROM animal_table,animal_device_table,animal_location");
+        $result = mysqli_query($con, "SELECT * FROM animal_table ORDER BY animal_id ASC");
 
 ?>
         <span class="input-group-btn">
@@ -134,19 +134,18 @@ require_once '../connection/db.php';
             <td>Animal ID</td>
             <td>Animal Name</td>
             <td>Animal Description</td>
-
-            <!--<td>Update</td>-->
+            <td></td>
         </tr>
 
         <?php
         //while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array
         while($res = mysqli_fetch_array($result)) {
             echo "<tr class=\"alert-info\">";
+            echo "<td class='' hidden>".$res['id']."</td>";
             echo "<td class=''>".$res['animal_id']."</td>";
             echo "<td>".$res['animal_name']."</td>";
             echo "<td>".$res['animal_description']."</td>";
-
-            //echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+            echo "<td><a href=\"reganimal.php?edit=$res[id]\" style='color: coral' class='fa fa-edit'></a> &nbsp; <a href=\"delete.php?del=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\" style='color: red' class='fa fa-trash-o'></a></td>";
         }
         ?>
         </table>

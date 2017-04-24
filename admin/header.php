@@ -162,7 +162,7 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="reganimal.php"><i class="fa fa-angle-double-right"></i> Register animal</a></li>
+                        <li><a href="reganimal.php?add"><i class="fa fa-angle-double-right"></i> Register animal</a></li>
                         <li><a href="addevice.php"><i class="fa fa-angle-double-right"></i> Add device</a></li>
                         <li><a href="assigndev.php"><i class="fa fa-angle-double-right"></i> Assign device</a></li>
                         <li><a href="alocation.php"><i class="fa fa-angle-double-right"></i> Animal location</a></li>
